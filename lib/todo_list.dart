@@ -8,8 +8,8 @@ import './todo_item.dart';
     selector: 'todo-list',
     templateUrl: './todo_list.html',
     styleUrls: const ['./todo_list.css'],
-    directives: const [TodoItem, CORE_DIRECTIVES, FORM_DIRECTIVES],
-    providers: const [model.TodoStore])
+    directives: const [TodoItem, CORE_DIRECTIVES, FORM_DIRECTIVES]
+)
 class TodoList {
   String newItem = 'test';
   model.TodoStore store;
