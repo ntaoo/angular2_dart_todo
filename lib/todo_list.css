@@ -37,7 +37,7 @@ button {
   margin: 130px 0 40px 0;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-  0 25px 50px 0 rgba(0, 0, 0, 0.1);
+              0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
 .todoapp input::-webkit-input-placeholder {
@@ -71,8 +71,7 @@ button {
   text-rendering: optimizeLegibility;
 }
 
-.new-todo,
-.edit {
+.new-todo {
   position: relative;
   margin: 0;
   width: 90%;
@@ -96,7 +95,7 @@ button {
   padding: 16px 16px 16px 60px;
   border: none;
   background: rgba(0, 0, 0, 0.003);
-  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
 }
 
 .main {
@@ -109,16 +108,6 @@ button {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.todo-list li {
-  position: relative;
-  font-size: 24px;
-  border-bottom: 1px solid #ededed;
-}
-
-.todo-list li:last-child {
-  border-bottom: none;
 }
 
 label {
