@@ -6,3 +6,10 @@ Simple todo app example.
 
 Todo app on Flux like unidirectional Architecture.
 
+# UI Channel (Layered architecture with UI Channel(Stream))
+
+Layered by restricted unidirectional communication between UI layer and
+Model(Application) layer by UI Channel(Stream) with Action events and State events.
+
+The model layer is structured based on DCI architecture, but any others
+like DDD, Flux, Redux(Reducers), CQRS will be able to apply. 
