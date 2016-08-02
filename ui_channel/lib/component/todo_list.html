@@ -1,0 +1,19 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>todos</h1>
+    <input class="new-todo" placeholder="What needs to be done?" autofocus
+           [(ngModel)]="newItem" (keyup.enter)="addTodo()">
+    <button class="add" (click)="addTodo()">Add</button>
+  </header>
+  <section class="main">
+    <ul class="todo-list">
+      <todo-item *ngFor="let item of todoList"
+                 [item]="item"
+                 (userRemovedTodo)="removeTodo($event)"
+                 (userUpdatedText)="updateText($event)"
+                 (userUpdatedCompletion)="updateCompletion($event)"
+      >
+      </todo-item>
+    </ul>
+  </section>
+</section>
