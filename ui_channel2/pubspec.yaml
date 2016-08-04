@@ -1,0 +1,19 @@
+name: todo_app
+version: 0.2.0
+dependencies:
+  angular2: 2.0.0-beta.19
+  async: ^1.11.0
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.0
+  stream_channel: ^1.5.0
+  uuid: ^0.5.0
+dev_dependencies:
+  test: ^0.12.0
+transformers:
+- angular2:
+    platform_directives:
+    - 'package:angular2/common.dart#COMMON_DIRECTIVES'
+    platform_pipes:
+    - 'package:angular2/common.dart#COMMON_PIPES'
+    entry_points: web/main.dart
+- dart_to_js_script_rewriter
