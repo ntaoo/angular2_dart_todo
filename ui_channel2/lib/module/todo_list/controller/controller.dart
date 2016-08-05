@@ -8,7 +8,8 @@ import 'package:todo_app/module/todo_list/model/data/visibility_filter.dart';
 
 const List controllerProviders = const [
   UuidGenerator,
-  const Provider(UserAddedTodo, useClass: UserAddedTodo, deps: const [UuidGenerator]),
+  const Provider(UserAddedTodo,
+      useClass: UserAddedTodo, deps: const [UuidGenerator]),
   UserUpdatedText,
   UserUpdatedCompletion,
   UserRemovedTodo,
