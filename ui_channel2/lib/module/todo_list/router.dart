@@ -1,25 +1,35 @@
 import 'package:angular2/core.dart';
-import 'package:todo_app/ui_channel/ui_channel.dart' show Action, Controller, Router;
+import 'package:todo_app/ui_channel/ui_channel.dart'
+    show Action, Controller, Router;
 import 'package:todo_app/module/todo_list/actions.dart' as a;
 import 'package:todo_app/module/todo_list/controller/controller.dart';
 
 @Injectable()
 class TodoListRouter implements Router {
-  Injector injector;
-  TodoListRouter(this.injector);
+  UserAddedTodo userAddedTodo;
+  UserUpdatedText userUpdatedText;
+  UserUpdatedCompletion userUpdatedCompletion;
+  UserRemovedTodo userRemovedTodo;
+  UserChangedVisibilityFilter userChangedVisibilityFilter;
+  TodoListRouter(
+      this.userAddedTodo,
+      this.userUpdatedText,
+      this.userUpdatedCompletion,
+      this.userRemovedTodo,
+      this.userChangedVisibilityFilter);
   Controller call(Action action) {
     // TODO: It might better to use reflection instead of this switch statement.
     switch (action.runtimeType) {
       case a.UserAddedTodo:
-        return injector.get(UserAddedTodo);
+        return userAddedTodo;
       case a.UserUpdatedText:
-        return injector.get(UserUpdatedText);
+        return userUpdatedText;
       case a.UserUpdatedCompletion:
-        return injector.get(UserUpdatedCompletion);
+        return userUpdatedCompletion;
       case a.UserRemovedTodo:
-        return injector.get(UserRemovedTodo);
+        return userRemovedTodo;
       case a.UserChangedVisibilityFilter:
-        return injector.get(UserChangedVisibilityFilter);
+        return userChangedVisibilityFilter;
       default:
         throw new ArgumentError('Unknown Action: $action');
     }
